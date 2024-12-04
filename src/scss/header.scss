@@ -1,5 +1,4 @@
 .header {
-
 	&__wrapper {
 		position: fixed;
 		width: 100%;
@@ -28,6 +27,9 @@
 		align-items: center;
 		@include adaptiveValue("column-gap", 50, 10);
 		row-gap: rem(5);
+		flex: 1 1 auto;
+    justify-content: center;
+		@include adaptiveValue("padding-left", 120, 10);
 		@media (max-width: em(991)){
 			  flex: 1 1 auto;
 				justify-content: flex-end;
