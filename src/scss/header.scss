@@ -8,13 +8,14 @@
 	}
 
 	&__container {
-		max-width: rem(1272);
+		@media (min-width:em(1201)){
+			width: 88%; 
+		}
 	}
 
 	&__inner {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 		gap: rem(25);
 	}
 
@@ -27,9 +28,14 @@
 		align-items: center;
 		@include adaptiveValue("column-gap", 50, 10);
 		row-gap: rem(5);
-		flex: 1 1 auto;
-    justify-content: center;
-		@include adaptiveValue("padding-left", 120, 10);
+		width: 38%;
+    justify-content: flex-end;
+		@media (max-width: em(1200)){
+			  width: 32%;
+		}
+		@media (max-width: em(1024)){
+			  padding-left: 0;
+		}
 		@media (max-width: em(991)){
 			  flex: 1 1 auto;
 				justify-content: flex-end;
@@ -37,6 +43,11 @@
 	}
 
 	&__menu {
+		@media (min-width: em(992)){
+			display: flex;
+			flex: 1 1 auto;
+			justify-content: flex-end;  
+		}
 		@media (max-width: em(991)){
 			  position: fixed;
 				z-index: 10;
