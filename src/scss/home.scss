@@ -415,10 +415,12 @@
 	&__inner {
 		display: flex;
 		height: 100%;
+    width: 145%;
+		transition: all 0.8s ease 0s;
 	}
 
 	&__support {
-		width: 35.83%;
+		width: 24.83%;
 		transition: all 0.4s ease 0s;
 	}
 
@@ -429,8 +431,9 @@
 	}
 
 	&__result {
-		width: 85%;
-		width: 0;
+		width: 30%;
+		padding: 0;
+		padding: 11.25rem 12.3125rem 2.8125rem 5.1875rem;
 		transition: all 0.4s ease 0s;
 	}
 }
@@ -458,6 +461,10 @@
 
 	&__btn {
 	}
+	// &._hide{
+	// 	width: 0;
+	// 	padding: 0;
+	// }
 }
 
 .main-info {
@@ -473,7 +480,6 @@
 	}
 }
 .result-info {
-	padding: 11.25rem 12.3125rem 2.8125rem 5.1875rem;
 	background-color: #fff;
 	overflow: hidden;
 	&__title {
@@ -498,6 +504,10 @@
 
 	&__btn {
 	}
+	// &._active{
+	// 	width: 60%;
+	// 	padding: 11.25rem 12.3125rem 2.8125rem 5.1875rem;
+	// }
 }
 
 .box-screen._level-1,
