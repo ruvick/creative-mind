@@ -78,6 +78,7 @@ body {
 	}
 	// Прижимаем footer
 	> main {
+		position: relative;
 		flex: 1 1 auto;
 	}
 	// Фикс для слайдеров
@@ -160,6 +161,21 @@ section {
 	height: 100vh;
 }
 
+.section {
+	position: absolute !important;
+	z-index: 3;
+	transform: translateY(100%);
+	transition: all 0.8s ease 0s;
+	&:nth-child(1)	{
+		transform: translateY(0);
+	}
+}
+
+.footer {
+	transform: translateY(100%);
+	z-index: 5;
+}
+
 .page {
 	&__screen {
 		position: relative;
@@ -169,4 +185,38 @@ section {
 	}
 	&__info {
 	}
+}
+
+.box-screen._first {
+	width: 100%;
+	transition: width 1.5s ease;
+}
+
+.box-screen._level-1,
+.box-screen._level-2,
+.box-screen._level-3,
+.box-screen._level-4 {
+	opacity: 0;
+	transform: translateY(100%);
+	transition: transform 0.8s ease, opacity 0.8s ease;
+	&.active{
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+.main-screen__animation-img {
+	transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.label-screen {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.active {
+	opacity: 1;
+	transform: translateY(0);
+	visibility: visible;
 }

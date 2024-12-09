@@ -7,7 +7,7 @@
 		left: 0;
 		z-index: 60;
 		height: 100%;
-		transition: all 0.8s ease 0s;
+		// transition: all 0.8s ease 0s;
 	}
 
 	&__main {
@@ -238,9 +238,8 @@
 }
 .main-screen__animation-img {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-34%, -53%);
+	top: 0%;
+	left: 15%;
 	z-index: 10;
 	width: 100%;
 	height: 100%;
@@ -420,7 +419,6 @@
 
 	&__support {
 		width: 35.83%;
-		// display: none;
 		transition: all 0.4s ease 0s;
 	}
 
@@ -432,7 +430,7 @@
 
 	&__result {
 		width: 85%;
-		// width: 0;
+		width: 0;
 		transition: all 0.4s ease 0s;
 	}
 }
@@ -502,3 +500,10 @@
 	}
 }
 
+.box-screen._level-1,
+.box-screen._level-2,
+.box-screen._level-3,
+.box-screen._level-4 {
+opacity: 0;
+transform: translateY(100%);
+}
